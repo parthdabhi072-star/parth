@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100613">
+    <meta name="description" content="A magical birthday surprise made with love.">
+    <title>A Special Birthday Surprise ✨</title>
+
+    <!-- Premium fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Background atmosphere -->
+    <div class="background-scene" aria-hidden="true">
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+        <div class="ambient ambient-three"></div>
+        <div class="star-field" id="starField"></div>
+        <div class="particle-field" id="particleField"></div>
+    </div>
+
+    <!-- Top navigation -->
+    <header class="topbar">
+        <a href="#home" class="brand">
+            <span class="brand-icon">✦</span>
+            <span>THE SPECIAL DAY</span>
+        </a>
+
+        <button
+            class="music-toggle"
+            id="musicToggle"
+            type="button"
+            aria-label="Toggle background music"
+            aria-pressed="false">
+            <span class="music-icon">♫</span>
+            <span id="musicLabel">SOUND OFF</span>
+        </button>
+    </header>
+
+    <main>
+
+        <!-- SECTION 1: WELCOME -->
+        <section class="hero section" id="home">
+
+            <div class="hero-decoration" aria-hidden="true">
+                <span class="orbit orbit-one"></span>
+                <span class="orbit orbit-two"></span>
+                <span class="orbit orbit-three"></span>
+                <span class="floating-symbol symbol-one">✧</span>
+                <span class="floating-symbol symbol-two">♡</span>
+                <span class="floating-symbol symbol-three">✦</span>
+                <span class="floating-symbol symbol-four">✧</span>
+            </div>
+
+            <div class="hero-content">
+
+                <div class="eyebrow reveal">
+                    <span class="eyebrow-line"></span>
+                    <span>A LITTLE SOMETHING FOR YOU</span>
+                    <span class="eyebrow-line"></span>
+                </div>
+
+                <p class="hero-pretitle reveal">
+                    Today is not just another day...
+                </p>
+
+                <h1 class="hero-title reveal">
+                    <span class="title-small">A VERY</span>
+                    <span class="title-main">SPECIAL</span>
+                    <span class="title-script">Birthday</span>
+                    <span class="title-last">CELEBRATION</span>
+                </h1>
+
+                <p class="hero-description reveal">
+                    Some people make ordinary moments extraordinary.
+                    Today, this little universe is all about you.
+                </p>
+
+                <div class="hero-divider reveal">
+                    <span></span>
+                    <span class="divider-star">✦</span>
+                    <span></span>
+                </div>
+
+                <button
+                    class="primary-button reveal"
+                    id="startSurprise"
+                    type="button">
+                    <span>OPEN YOUR SURPRISE</span>
+                    <span class="button-arrow">↗</span>
+                </button>
+
+                <p class="hero-footnote reveal">
+                    MADE WITH CARE, JUST FOR YOU ♡
+                </p>
+
+            </div>
+
+            <a class="scroll-indicator" href="#celebration">
+                <span>SCROLL TO DISCOVER</span>
+                <span class="scroll-line"></span>
+            </a>
+
+        </section>
+
+        <!-- SECTION 2: CELEBRATION -->
+        <section class="celebration section" id="celebration">
+
+            <div class="section-heading reveal">
+                <p class="section-kicker">CHAPTER ONE · THE CELEBRATION</p>
+                <h2>
+                    Let The Magic
+                    <span class="gradient-text">Begin</span>
+                </h2>
+                <p>
+                    A little sparkle, a little happiness,
+                    and a whole lot of birthday magic.
+                </p>
+            </div>
+
+            <!-- CSS birthday cake -->
+            <div class="cake-scene reveal">
+
+                <div class="cake-glow"></div>
+
+                <div class="cake">
+                    <div class="candles">
+                        <div class="candle candle-one">
+                            <span class="flame"></span>
+                        </div>
+                        <div class="candle candle-two">
+                            <span class="flame"></span>
+                        </div>
+                        <div class="candle candle-three">
+                            <span class="flame"></span>
+                        </div>
+                    </div>
+
+                    <div class="cake-top">
+                        <span class="icing-drip drip-one"></span>
+                        <span class="icing-drip drip-two"></span>
+                        <span class="icing-drip drip-three"></span>
+                        <span class="cake-sprinkle sprinkle-one"></span>
+                        <span class="cake-sprinkle sprinkle-two"></span>
+                        <span class="cake-sprinkle sprinkle-three"></span>
+                    </div>
+
+                    <div class="cake-layer cake-layer-top"></div>
+                    <div class="cake-layer cake-layer-middle"></div>
+                    <div class="cake-layer cake-layer-bottom"></div>
+                    <div class="cake-plate"></div>
+                </div>
+
+                <p class="cake-caption">
+                    MAKE A WISH <span>✧</span>
+                </p>
+
+            </div>
+
+            <div class="wish-card reveal">
+                <span class="wish-icon">☾</span>
+                <h3>A Wish Just For You</h3>
+                <p>
+                    May your days be filled with laughter,
+                    your heart with peace, and your future
+                    with beautiful possibilities.
+                </p>
+                <button class="text-button" id="wishButton" type="button">
+                    MAKE A WISH <span>✦</span>
+                </button>
+                <p class="wish-result" id="wishResult" aria-live="polite"></p>
+            </div>
+
+            <!-- Confetti launcher -->
+            <div class="celebration-action reveal">
+                <button class="secondary-button" id="confettiButton" type="button">
+                    <span>🎉</span>
+                    LET'S CELEBRATE
+                </button>
+            </div>
+
+        </section>
+
+        <!-- SECTION 3: BEAUTIFUL WORDS -->
+        <section class="message-section section" id="message">
+
+            <div class="message-decoration" aria-hidden="true">
+                <span class="message-heart heart-one">♡</span>
+                <span class="message-heart heart-two">♥</span>
+                <span class="message-heart heart-three">♡</span>
+            </div>
+
+            <div class="section-heading reveal">
+                <p class="section-kicker">CHAPTER TWO · A FEW WORDS</p>
+                <h2>
+                    A Small Message,
+                    <span class="gradient-text">A Big Meaning</span>
+                </h2>
+                <p>
+                    Because sometimes, simple words can
+                    make the biggest difference.
+                </p>
+            </div>
+
+            <div class="letter-card reveal">
+
+                <div class="letter-top">
+                    <span class="letter-stamp">♡</span>
+                    <span class="letter-label">A LETTER FOR YOU</span>
+                    <span class="letter-sparkle">✧</span>
+                </div>
+
+                <div class="letter-content">
+                    <p class="letter-greeting">Hey, birthday star!</p>
+
+                    <p>
+                        Today is your day, and I hope you know
+                        how much happiness you bring to the people
+                        around you.
+                    </p>
+
+                    <p>
+                        Life may not always be perfect, but I hope
+                        this new chapter brings you more reasons
+                        to smile, more memories to cherish, and
+                        more dreams to chase.
+                    </p>
+
+                    <p>
+                        Keep being yourself. Keep laughing at
+                        the little things. Keep believing that
+                        amazing moments are still waiting for you.
+                    </p>
+
+                    <p class="letter-highlight">
+                        You deserve a day as wonderful as the
+                        happiness you bring into this world. ♡
+                    </p>
+
+                    <p class="letter-signature">
+                        With lots of good wishes,
+                        <span>Someone who cares ✨</span>
+                    </p>
+                </div>
+
+                <div class="letter-bottom">
+                    <span>SEALED WITH GOOD WISHES</span>
+                    <span>♥</span>
+                </div>
+
+            </div>
+
+            <button
+                class="secondary-button reveal"
+                id="heartButton"
+                type="button">
+                SEND SOME HEARTS ♡
+            </button>
+
+        </section>
+
+        <!-- SECTION 4: MEMORY MOMENTS -->
+        <section class="moments section" id="moments">
+
+            <div class="section-heading reveal">
+                <p class="section-kicker">CHAPTER THREE · LITTLE THINGS</p>
+                <h2>
+                    Things Worth
+                    <span class="gradient-text">Celebrating</span>
+                </h2>
+                <p>
+                    No photographs needed. Just a few reminders
+                    of what makes life beautiful.
+                </p>
+            </div>
+
+            <div class="moments-grid">
+
+                <article class="moment-card reveal">
+                    <div class="moment-number">01</div>
+                    <div class="moment-icon">☀</div>
+                    <h3>Your Smile</h3>
+                    <p>
+                        May you always find a reason to smile,
+                        even on the most ordinary days.
+                    </p>
+                    <span class="moment-footer">A LITTLE HAPPINESS</span>
+                </article>
+
+                <article class="moment-card reveal">
+                    <div class="moment-number">02</div>
+                    <div class="moment-icon">✧</div>
+                    <h3>Your Dreams</h3>
+                    <p>
+                        May you find the courage to chase the
+                        things that make your heart feel alive.
+                    </p>
+                    <span class="moment-footer">A WORLD OF POSSIBILITIES</span>
+                </article>
+
+                <article class="moment-card reveal">
+                    <div class="moment-number">03</div>
+                    <div class="moment-icon">♡</div>
+                    <h3>Your People</h3>
+                    <p>
+                        May you always be surrounded by people
+                        who appreciate the real you.
+                    </p>
+                    <span class="moment-footer">CONNECTIONS THAT MATTER</span>
+                </article>
+
+                <article class="moment-card reveal">
+                    <div class="moment-number">04</div>
+                    <div class="moment-icon">☾</div>
+                    <h3>Your Journey</h3>
+                    <p>
+                        May the next chapter bring new lessons,
+                        unexpected adventures, and peace.
+                    </p>
+                    <span class="moment-footer">YOUR STORY CONTINUES</span>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- SECTION 5: SECRET SURPRISE -->
+        <section class="secret-section section" id="secret">
+
+            <div class="section-heading reveal">
+                <p class="section-kicker">CHAPTER FOUR · JUST ONE MORE THING</p>
+                <h2>
+                    A Little
+                    <span class="gradient-text">Secret</span>
+                </h2>
+                <p>
+                    There is one more surprise waiting for you.
+                </p>
+            </div>
+
+            <div class="secret-container reveal">
+
+                <div class="gift-box" id="giftBox">
+                    <div class="gift-glow"></div>
+                    <div class="gift-lid">
+                        <span class="gift-ribbon"></span>
+                    </div>
+                    <div class="gift-body">
+                        <span class="gift-ribbon"></span>
+                        <span class="gift-bow">♡</span>
+                    </div>
+                </div>
+
+                <p class="gift-instruction" id="giftInstruction">
+                    SOME SURPRISES ARE BETTER OPENED
+                    WITH A LITTLE CURIOSITY.
+                </p>
+
+                <button class="primary-button" id="giftButton" type="button">
+                    UNWRAP YOUR GIFT ✨
+                </button>
+
+                <div class="secret-message" id="secretMessage" hidden>
+                    <span class="secret-crown">✦</span>
+                    <h3>One More Wish For You</h3>
+                    <p>
+                        No matter where life takes you,
+                        I hope you never forget that you matter.
+                        May happiness find you in unexpected
+                        places, and may this year give you
+                        countless reasons to feel proud.
+                    </p>
+                    <span class="secret-signature">
+                        HAPPY BIRTHDAY, STAR! ♡
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SECTION 6: FINAL CELEBRATION -->
+        <section class="final-section section" id="finale">
+
+            <div class="final-stars" aria-hidden="true">✦ · ✧ · ✦</div>
+
+            <div class="final-content reveal">
+                <p class="section-kicker">THE FINAL CHAPTER</p>
+
+                <h2 class="final-title">
+                    HAPPY
+                    <span class="gradient-text">BIRTHDAY!</span>
+                </h2>
+
+                <p class="final-script">
+                    Keep shining, always.
+                </p>
+
+                <div class="final-divider">
+                    <span></span>
+                    <span>♡</span>
+                    <span></span>
+                </div>
+
+                <p class="final-description">
+                    A new year of life.
+                    A thousand new possibilities.
+                    And so many beautiful moments yet to come.
+                </p>
+
+                <button
+                    class="primary-button"
+                    id="finalCelebrate"
+                    type="button">
+                    CELEBRATE ONE MORE TIME ✨
+                </button>
+
+                <button
+                    class="text-button restart-button"
+                    id="restartButton"
+                    type="button">
+                    ↺ START THE SURPRISE AGAIN
+                </button>
+            </div>
+
+            <div class="final-hearts" aria-hidden="true">
+                <span>♡</span>
+                <span>♥</span>
+                <span>♡</span>
+                <span>✧</span>
+                <span>♥</span>
+                <span>♡</span>
+                <span>✦</span>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Floating celebration layer -->
+    <div
+        class="effects-layer"
+        id="effectsLayer"
+        aria-hidden="true">
+    </div>
+
+    <!-- Toast notifications -->
+    <div
+        class="toast"
+        id="toast"
+        role="status"
+        aria-live="polite">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-symbol">✦</div>
+        <p>MADE FOR A DAY THAT MATTERS</p>
+        <span>WITH GOOD WISHES & LOTS OF MAGIC ♡</span>
+        <a href="#home" class="back-to-top">BACK TO THE BEGINNING ↑</a>
+    </footer>
+
+</body>
+</html>
